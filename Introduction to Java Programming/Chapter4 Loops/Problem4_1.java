@@ -53,5 +53,7 @@ public class Main {
         System.out.println("Number of negative integers : " + negatives);
         System.out.println("Total number of integers    : " + nbOfIntegers);
         System.out.println("Computed Average            : " + avg);
+
+        input.close();
     }
 }

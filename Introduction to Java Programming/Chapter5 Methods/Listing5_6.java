@@ -26,6 +26,8 @@ public class Main {
 
         // Displaying the Result
         System.out.println("The greatest common divisor of " + nb1 + " and " + nb2 + " is " + gcd);
+
+        input.close();
     }
 
 

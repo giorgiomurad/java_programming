@@ -57,7 +57,3 @@ public class Main {
         input.close();
     }
 }
-
-/* Mistake:
- * 49-52 : (+) instead of (*)
- */

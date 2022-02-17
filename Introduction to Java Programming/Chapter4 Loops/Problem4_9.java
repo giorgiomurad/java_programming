@@ -64,5 +64,7 @@ public class Main {
         System.out.printf("The student with the highest score is %s with a score of %.2f / 100" +
                         "\nThe student with the second-highest score is %s with a score of %.2f / 100",
                            std1, score1, std2, score2);
+
+        input.close();
     }
 }
