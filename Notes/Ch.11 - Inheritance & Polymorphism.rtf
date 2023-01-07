@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 . In Java, 
+\f1\i Inheritance
+\f0\i0  is a powerful feature that consists of reusing software.\
+\
+. When deploying classes with common functions and features, it would be useful to use Inheritance in a case like this in order to avoid redundancy, and make the program easy to maintain\
+\
+. If we assume that a Circle and Rectangle class have common properties and behaviors, these common properties can be inherited from a class called GeometricObject. In that case, Geometric object is the 
+\f1\i Superclass
+\f0\i0  while the rest are 
+\f1\i Subclasses
+\f0\i0 \
+\
+. Data fields and properties can be set as 
+\f2\b public
+\f0\b0 , 
+\f2\b private
+\f0\b0 , and 
+\f2\b protected
+\f0\b0 .\
+  Public properties can be accessed anywhere, while private properties can be accessed in the class itself.\
+  However, protected properties are properties that can be accessed within the class, and its subclasses.\
+\
+. For a subclass to inherit from a superclass, the keyword 
+\f2\b extends
+\f0\b0  is used:\
+	
+\f2\b \cf2 public class
+\f0\b0 \cf3  Rectangle1 
+\f2\b \cf2 extends
+\f0\b0 \cf3  GeometricalObject \{\}\
+\
+. For the subclass to call the constructor in the superclass, the keyword 
+\f2\b super()
+\f0\b0  is used\
+\
+. For the subclass to access any property of the superclass, similar to how the keyword 
+\f2\b this
+\f0\b0  is used, the keyword 
+\f2\b super
+\f0\b0  is used\
+\
+. Since a subclass would have the capability to access methods in the superclass, it would sometimes be necessary to use the method from the superclass to implement a method in the subclass\
+  This is called 
+\f1\i method overriding
+\f0\i0 \
+\
+. As a reminder, the difference between method 
+\f1\i overload
+\f0\i0  and method 
+\f1\i override
+\f0\i0  is that overloading a method is implementing multiple methods with the same name, but different signatures. Whereas overriding a method is calling a method from the superclass while implement a method in the subclass\
+\
+. By default, every class inherits from one class, which is the 
+\f2\b Object
+\f0\b0  class\
+\
+. Occasionally, the 
+\f2\b final
+\f0\b0  keyword can be used in order to prevent classes from being extended, and can be used to prevent methods from being overridden}

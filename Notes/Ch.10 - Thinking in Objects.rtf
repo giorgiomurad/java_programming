@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 - When creating an object whose contents cannot be changed. Such an object is called an 
+\f1\i immutable object
+\f0\i0  and its class is referred to as an 
+\f1\i immutable class
+\f0\i0 .\
+\
+- For a class to be 
+\f1\i immutable
+\f0\i0 , all its data fields must be private, and cannot contain public 
+\f2\b set
+\f0\b0  method for any data field.\
+\
+- The 
+\f2\b this 
+\f0\b0 keyword is referred to an object calling on itself.\
+   It is useful for referencing a private data field in order to set a new value to it.\
+\
+- A private static variable can be accessed using the class name (ClassName.StaticVariable), and a private instance variable can be accessed using the 
+\f2\b this 
+\f0\b0 keyword (this.name).\
+\
+- Another use of the 
+\f2\b this 
+\f0\b0 keyword is to enable a constructor to invoke another constructor of the same class (
+\f2\b this(1.0)
+\f0\b0 ).\
+\
+- 
+\f1\i Class abstraction
+\f3\b  
+\f0\i0\b0 is the separation of the class implementation from the use of the class.\
+  The user of the class can benefit from the class\'92s methods and variables without necessarily having to know how the class is implemented.\
+  This process is called 
+\f1\i data encapsulation
+\f0\i0 .\
+\
+- Procedural paradigm focuses on designing methods.\
+  Object-oriented paradigm couples data and methods together into objects.\
+\
+- An object can contain another object. This relation is called 
+\f1\i composition.\
+  
+\f0\i0 For example, and object can contain a 
+\f2\b String 
+\f0\b0 data field.\
+\
+- For composition between two objects, the owner object is called an 
+\f1\i aggregated object
+\f0\i0 , and its class an 
+\f1\i aggregated class
+\f0\i0 .\
+\
+- A single entity with too many responsibilities can be broken down into several classes.\
+  For example, the classes String, StringBuilder, and StringBuffer all deals with string values, but have different purposes.\
+  The 
+\f2\b String 
+\f0\b0 class deals with immutable strings, the 
+\f2\b StringBuilder
+\f0\b0  class is for creating mutable strings, and the 
+\f2\b StringBuffer
+\f0\b0  class also deals with mutable strings, but includes synchronized methods for updating strings.\
+\
+- If no constructors are defined explicitly, a public no-arg constructor with no body is assumed.\
+\
+- To prevent users to create an instance of an object, the constructor in the class must be declared private.\
+\
+- A static variable or method can be invoked from an instance method, but an instance variable or method cannot be invoked from a static method}

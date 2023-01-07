@@ -1,0 +1,120 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2707
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 . A 
+\f1\i string
+\f0\i0  is known to be a sequence of characters\
+  In other programming languages, a string is referred to as an array of characters.\
+  But in Java, a string is an object\
+\
+. The String object is only very useful for Object-Oriented Programming, but also provides a good example for learning classes and objects\
+\
+. A String object is known to be immutable, meaning that it\'92s contents cannot be changed\
+\
+. When a String variable is assigned a string value before assigned another string value, this does not mean that the content of the String object was changed. Instead, the variable no longer referred to the first String object, and refers the other String object.\
+So the content of the first String object remains present, but is no longer accessible\
+\
+. When two different string variables are assigned string values that contain the exact same characters in the same order, therefore, the two variables reference the same String object.\
+This instance is provided by the JVM in order to improve efficiency and saved memory. Such an instance is called 
+\f1\i interned
+\f0\i0 \
+\
+. Syntax errors will more likely occur when using comparison operators (>, >=, \'85) to compare two different string variables. As a solution, the String object contains methods to allow the comparison of different string values\
+\
+. The String class also provides methods for obtaining the length of the string, retrieving individual characters, and concatenating strings\
+\
+. Java provides two ways to concatenate two string values, the first is with the use of the operator 
+\f2\b +
+\f0\b0 , and the second involves the use of the 
+\f2\b concat
+\f0\b0  method which is provided by the String class\
+\
+. The String class also provides methods for converting, replacing characters in the string, splitting the string, and retrieving substrings from the original string\
+\
+. The String class offers a feature of matching, replacing, and splitting a string using a specific pattern. This feature is known as 
+\f1\i regular expression
+\f0\i0 \
+\
+. A String is an object, not an array of characters. But the String class provides a method that converts the string value to an array of characters\
+\
+. There are two objects that act as alternatives to the 
+\f2\b String
+\f0\b0  object: 
+\f2\b StringBuffer
+\f0\b0  and 
+\f2\b StringBuilder
+\f0\b0 \
+\
+. 
+\f2\b StringBuilder
+\f0\b0  is used more than 
+\f2\b StringBuffer
+\f0\b0  since 
+\f2\b StringBuilder
+\f0\b0  is more efficient in programming\
+\
+. The main difference between 
+\f2\b String 
+\f0\b0 and 
+\f2\b StringBuilder
+\f0\b0  is that the content of the 
+\f2\b String
+\f0\b0  object is immutable, whereas the content of the 
+\f2\b StringBuilder
+\f0\b0  object is mutable, meaning that it\'92s value is customizable\
+\
+. The 
+\f2\b StringBuilder
+\f0\b0  class provides methods that can append new contents, insert contents at specified positions, and delete or replace particular characters\
+\
+. Since Java allows running the program with the command line without the help of an IDE, Java also allows inputting values if we notice in the signature of the main method where the parameter is an array of strings.\
+\
+. 
+\f1\i String[] args
+\f0\i0  is the parameter of the main method. When we run the program from the command line, and add three string values (
+\f2\b java Main Hello Goodbye World
+\f0\b0 ), the program will count these three string values as 
+\f2\b args[0]
+\f0\b0 , 
+\f2\b args[1]
+\f0\b0 , and 
+\f2\b args[2]\
+\
+
+\f0\b0 . If an integer or any other non-string data type is added as a parameter, the program will take the value as a string and would have to be converted if it is to be used as a non-string value\
+\
+. On every program run, all data stored in variables are temporary and not permanent. Which is why Java provides an object called 
+\f2\b File\
+\
+
+\f0\b0 . The File object allows variables to reference files such as text files when programs are looking to retrieve, update, and store saved data\
+\
+. Unfortunately, the File object only directs to different files, and provides info about the directed files\
+\
+. Java provides two additional objects, one object for reading from the file (
+\f2\b Scanner
+\f0\b0 ), and the other object for writing into the file (
+\f2\b PrintWriter
+\f0\b0 )\
+\
+. For a program to read or write from a file, the program would have to be directed to a file first, before reading or writing data\
+\
+. In programming, this is done by:\
+					- Initializing a File variable that refers directly to the file\
+					- Initializing a Scanner variable referring to the file, allowing the variable to read and retrieve info from the file\
+					- Initializing a PrintWriter variable also referring to the file, allowing the variable to write info into the file\
+\
+. When a 
+\f2\b PrintWriter
+\f0\b0  object is initialized, if the specified file is not created, it will automatically create one\
+\
+. Java provides a feature from the 
+\f2\b Java.swing
+\f0\b0  package where users can easily open and save files in the system, the identified object is called 
+\f2\b JFileChooser
+\f0\b0 .}

@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 . Runtime Errors occur while a program is running, and an operation that is impossible to carry out is detected\
+\
+. In Java, runtime errors are caused by exceptions. An exception is an object that represents an error or condition that prevents program execution from proceeding normally\
+  Every time an exception is caught, the program will terminate abnormally\
+\
+. There are various types of exception objects, and each object is thrown for a reason. For example, 
+\f1\b ArrayIndexOutOfBoundsException
+\f0\b0  involves arrays, and 
+\f1\b FileNotFoundException
+\f0\b0  involves files that are not detected.\
+\
+. For a program to handle an exception, the program can contain a try block, and a catch block. The try block contains statements of code to be executed in normal circumstances. The catch block contains the code that is to be executed when an exception is thrown from the try block.\
+\
+. An exception object can be thrown manually. For example: 
+\f1\b throw new ArithmeticException(\'93
+\f0\b0 Exception Thrown.
+\f1\b \'94);\
+\
+
+\f0\b0 . When an exception is thrown, the normal execution flow in the try block is interrupted, and the exception is passed to the catch block. The code in the catch block is executed in order to 
+\f2\i handle the exception
+\f0\i0 , Afterward the statement(s) after the catch-block are executed normally\
+\
+. The 
+\f1\b throw
+\f0\b0  statement is similar to a method call, and the catch block is the method itself being called with parameter being the exception object thrown to it\
+\
+. An exception object may be thrown directly by using a throw statement in a try block, or by invoking a method that may throw an exception\
+\
+. The 
+\f1\b Throwable
+\f0\b0  class is the root of all exception classes. All Java exception classes inherit from 
+\f1\b Throwable
+\f0\b0  \
+\
+. It is possible to create a very own exception class that extends or inherits from the class 
+\f1\b Exception
+\f0\b0 \
+\
+. Another subclass of 
+\f1\b Throwable
+\f0\b0 , other than 
+\f1\b Exception
+\f0\b0 , is the 
+\f1\b Error
+\f0\b0  class. The 
+\f1\b Error
+\f0\b0  class defines internal system errors which are thrown by the JVM, and rarely occur\
+\
+. There are 
+\f2\i Exceptions
+\f0\i0  which describe errors by the program, and by external circumstances like accessing a no-existent file, and wrong input. And there are 
+\f2\i Runtime Exceptions
+\f0\i0  which describe programming errors such as bad casting, and numeric errors\
+\
+. Instead of having a try-catch block inside the method, an exception can be explicitly declared on the method header. For example:  
+\f1\b public static void 
+\f0\b0 sum(
+\f1\b int 
+\f0\b0 n1, 
+\f1\b int 
+\f0\b0 n2) 
+\f1\b throws 
+\f0\b0 Exception \{\}\
+\
+. It is also possible to declare that a method might throw one of multiple exception. For instance: 
+\f1\b public static void
+\f0\b0  method() 
+\f1\b throws
+\f0\b0  NullPointerException, ArithmeticException, RuntimeException \{\}\
+\
+. A program that detects an error can create an instance of an exception object before throwing it.This is known as 
+\f2\i throwing an exception
+\f0\i0 \
+\
+. It is possible for a try-block to have more than one catch-block. The program in the catch block may throw one of multiple exception types, and every catch block can be made for each of these exceptions\
+\
+. Java provides a clause with keyword 
+\f1\b finally
+\f0\b0 , which is a block that is to be executed regardless whether the an exception occurs or not\
+\
+. In any method, the 
+\f1\b finally
+\f0\b0  block executes even if there is a return statement prior to reaching the finally block\
+\
+. Java makes it possible for a catch block to throw another exception object}
