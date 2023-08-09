@@ -1,0 +1,96 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 . The key benefit of generics is to enable errors to be detached at compile time rather than at runtime\
+\
+. Several classes and interfaces in the Java API are defined using generics\
+ \
+. \ul Example:\ulnone \
+Prior to JDK 1.5, the interface 
+\f1\b java.lang.Comparable
+\f0\b0  was defined as:\
+	
+\f1\b public interface 
+\f0\b0 Comparable \{\
+\
+		
+\f1\b public int 
+\f0\b0 compareTo(Object o);\
+	\}\
+\
+Since JDK 1.5, the interface is defined as:\
+
+\f1\b 	public interface
+\f0\b0  Comparable<T> \{\
+\
+		
+\f1\b public int
+\f0\b0  compareTo(T o);\
+	\}\
+Here, 
+\f2\i <T>
+\f0\i0  represents a formal generic type, which can be replaced later with an actual concrete type. Replacing a generic type is called 
+\f2\i generic instantiation
+\f0\i0 .\
+\
+. Instead of using a generic type, you could simply make the type element Object, which can accommodate any object type\
+  However, using generic types can improve software reliability and readability because certain errors can be detected at compile time rather than at runtime\
+\
+. It is also possible to use generic types to define generic methods\
+\
+. A generic type can be specified as a subtype of another type. Such a generic type is 
+\f2\i bounded
+\f0\i0 \
+  \ul Example:\ulnone    <E 
+\f1\b extends
+\f0\b0  GeometricObject>\
+\
+. A generic method that is used without a parameter type is called a 
+\f2\i raw type
+\f0\i0  of method, which can be unsafe and cause a runtime error\
+\
+. When the generic parameter type of a method is specified, it is a case of a 
+\f2\i wildcard generic type
+\f0\i0 \
+\
+. A wildcard generic type has three forms: 
+\f1\b ?
+\f0\b0 , 
+\f1\b ? extends T
+\f0\b0 , 
+\f1\b ? super T
+\f0\b0 \
+\
+. 
+\f1\b ?
+\f0\b0  is an 
+\f2\i unbounded wildcard
+\f0\i0 			(same as 
+\f1\b ? extends Object
+\f0\b0 )\
+  
+\f1\b ? extends T
+\f0\b0  is a 
+\f2\i bounded wildcard
+\f0\i0  		(type 
+\f1\b T
+\f0\b0  or any subtype of 
+\f1\b T
+\f0\b0 )\
+  
+\f1\b ? super T
+\f0\b0  is an 
+\f2\i under-bounded wildcard
+\f0\i0 	(type 
+\f1\b T
+\f0\b0  or any super-type of 
+\f1\b T
+\f0\b0 )\
+\
+. The generics are present at runtime. Once the compiler confirms that the generic is used safely, it converts it into a raw type. This approach is called 
+\f2\i type erasure}
