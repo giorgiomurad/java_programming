@@ -16,6 +16,9 @@ public int nextInt() {}
 // Returns a random int value between 0 and 'n' (exclusive) [0, n[
 public int nextInt(int n) {}
 
+// Returns a random integer value between the specified origin and the specified bound (exclusive)
+public int nextInt(int origin, int bound) {}
+
 // Returns a random long value
 public long nextLong() {}
 
