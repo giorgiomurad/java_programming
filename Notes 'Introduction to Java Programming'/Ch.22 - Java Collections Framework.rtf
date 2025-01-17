@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 . Like the library 
+\f1\b Arraylist
+\f0\b0 , Java provides several data structures that help organize and manipulate data efficiently. These data structures that can be used are most commonly known as 
+\f2\i Java Collections Framework
+\f0\i0 .\
+\
+. Data structures are mainly objects that are capable of storing other objects. That\'92s why they are referred by some people as 
+\f2\i container objects
+\f0\i0 .\
+\
+. 
+\f1\b Maps
+\f0\b0  are efficient data structures for fast searching elements using keys. Every element is referenced by a unique key\
+\
+. The Java Collections framework supports three major types of collections: 
+\f1\b Set
+\f0\b0 , 
+\f1\b List
+\f0\b0 , and 
+\f1\b Queue
+\f0\b0 :\
+	- A set stores a collection of non-duplicate elements\
+	- A list stores a collection of elements in order\
+	- A queue stores the collection of elements in a first-in first-out fashion\
+\
+. The 
+\f1\b Collection 
+\f0\b0 interface is the root interface for manipulating a collection of objects\
+\
+. The concrete classes that implement the 
+\f1\b Set
+\f0\b0  interface must ensure that no duplicate elements can be added in the collection\
+\
+. Three concrete classes of the 
+\f1\b Set
+\f0\b0  interface are 
+\f1\b HashSet
+\f0\b0 , 
+\f1\b LinkedHashSet
+\f0\b0 , and 
+\f1\b TreeSet
+\f0\b0 \
+\
+. A HashSet object can be created either empty, or with the elements of a specified collection. By default, the initial capacity of a hashes object is 16\
+\
+. A 
+\f2\i Load factor
+\f0\i0  is a property that measures how many elements a set is allowed to carry before its capacity is doubled.\
+  
+\f1\b For example:
+\f0\b0  If the capacity of a set is 16, and the load factor is 0.75, the capacity of the set is doubled to 32 when the set contains 12 elements (16 * 0.75 = 12)\
+\
+. Suppose we have two string sets, set1 and set2. If set1 is called to retain all elements from set2 (
+\f1\b set1.retainAll(set2)
+\f0\b0 ), and both sets have no common elements, then set1 will become an empty set\
+\
+. 
+\f1\b LinkedHashSet
+\f0\b0  extends 
+\f1\b HashSet
+\f0\b0  with a linked-list implementation that supports an ordering of elements in the set\
+\
+. All concrete classes in the Java Collections Framework have at least two constructors:\
+									- A no-arg constructor\
+									- A with-arg constructor that constructs from an already constructed collection object\
+\
+. In case there\'92s no need to maintain a sorted set, a hash set can be used for inserting and removing elements faster. Otherwise, a tree set can be created from the hash set\
+\
+. While inserting elements into a set, the elements may not implement the 
+\f1\b Comparable
+\f0\b0  interface. A 
+\f1\b Comparator
+\f0\b0  interface can be used in another way for comparing elements. To achieve this, simply create an object that implements the 
+\f1\b java.util.Comparator
+\f0\b0  interface, and establish elements for that object into the constructed sets\
+\
+. The 
+\f1\b equals
+\f0\b0  method in the Comparator interface is also implemented in the 
+\f1\b Object
+\f0\b0  class, so the program will not give a compilation error if the method was not defined in a class that implements Comparator. However, defining the method in the class is a good idea as it improves better and quicker system performance\
+\
+. For classes that implement the Comparator interface, it is also a good idea for them to implement the 
+\f1\b Serializable
+\f0\b0  interface as they may be used in serializable data structures such as 
+\f1\b TreeSet\
+\
+
+\f0\b0 . If a tree set object is constructed from an object that implements the comparator interface, to note that the comparator interface contains the method 
+\f1\b compare()
+\f0\b0 , it would be easier and faster for the tree set data structure to maintain its sorted elements.\
+	- Example:	
+\f1\b Set 
+\f0\b0 set =
+\f1\b  new TreeSet
+\f0\b0 <
+\f1\b GeometricObject
+\f0\b0 >(
+\f1\b new GeometricObjectComparator
+\f0\b0 ());     (GeometricObjectComparator implements the 
+\f1\b Comparator
+\f0\b0  and 
+\f1\b Serializable
+\f0\b0  interfaces, and the 
+\f1\b compare()
+\f0\b0  method)\
+ This advantage results in faster response time, and low memory usage.\
+\
+. A set doesn\'92t allow the storage of duplicate elements. However, in order to allow duplicate elements to be stored in a collection, a 
+\f1\b List
+\f0\b0  is used.\
+\
+. A list collection doesn\'92t only allow storing duplicate elements, but also allows the user to specify where every element is stored in the list. Elements in a list are accessible by index\
+\
+. The 
+\f1\b ArrayList
+\f0\b0  and 
+\f1\b LinkedList
+\f0\b0  classes are two concrete implementations of the List interface\
+\
+. A LinkedList object is suitable when insertion and deletion of list elements are required in the program\
+\
+. If the application does not require the insertion or deletion of elements from the list, an ArrayList is the most efficient data structure\
+\
+. 
+\f1\b ArrayList 
+\f0\b0 and 
+\f1\b LinkList
+\f0\b0  objects operate similarly, but the critical difference pertains to internal implementation, which affects their performance\
+\
+. 
+\f1\b ArrayList
+\f0\b0  is efficient in inserting and removing elements from the end of the list\
+\
+. 
+\f1\b LinkedList
+\f0\b0  is efficient in inserting and removing elements anywhere in the list\
+\
+. 
+\f1\b Vector 
+\f0\b0 is the same as 
+\f1\b ArrayList
+\f0\b0 , the difference is that a vector contains synchronized methods for accessing and modifying data. Synchronized methods prevent data corruption when accessed or modified by two or more threads concurrently\
+\
+. For programs and applications that do not require a lot of synchronization, 
+\f1\b ArrayList
+\f0\b0  is more efficient than 
+\f1\b Vector
+\f0\b0 \
+\
+. In Java Collections Framework, 
+\f1\b Stack
+\f0\b0  is implemented as an extension of 
+\f1\b Vector
+\f0\b0 \
+\
+. A queue is a first-in first-out data structure. Elements are appended to the end of the queue, and are removed from the beginning of the queue\
+\
+. A map is a container that stores elements their keys.\
+  In 
+\f1\b List
+\f0\b0 , the indexes are integers. In 
+\f1\b Map
+\f0\b0 , the index can be any object.\
+\
+. A map cannot contain duplicate keys. Every key is mapped to one value.\
+\
+. There are three types of maps:	
+\f1\b HashMap, LinkedHashMap, 
+\f0\b0 and 
+\f1\b TreeMap
+\f0\b0 . The common features of these maps are listed in the map interface.\
+\
+. The 
+\f1\b entrySet()
+\f0\b0  method in the 
+\f1\b Map
+\f0\b0  interface returns a set of objects that implement the 
+\f1\b Map.Entry<K, V>
+\f0\b0  interface. 
+\f1\b Entry
+\f0\b0  is an inner interface for the map interface.\
+\
+. The entries in a 
+\f1\b HashMap
+\f0\b0  are in random order.\
+  The entries in a 
+\f1\b TreeMap
+\f0\b0  are in ascending order.\
+  And the entries in a 
+\f1\b LinkedHashMap
+\f0\b0  are in the order of access, from the least recently accessed to the most recently accessed.}
